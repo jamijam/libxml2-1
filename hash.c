@@ -228,6 +228,7 @@ xmlHashGrow(xmlHashTablePtr table, int size) {
 	the main table. So instead, we run through the array twice, first
 	copying all the elements in the main array (where we can't get
 	conflicts) and then the rest, so we only free (and don't allocate)
+	 
     */
     for (i = 0; i < oldsize; i++) {
 	if (oldtable[i].valid == 0) 
